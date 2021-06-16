@@ -1,0 +1,39 @@
+#aboutSection{
+    height: 100vh;
+
+    #profileCard{
+        @include glass_1;
+        border-radius: 4px;
+        box-shadow: 1px 1px 3px $secondary;
+        width: 40%;
+        height: 400px;
+        max-height: 400px;
+        margin: auto;
+
+        #text{
+            opacity: 0%;
+            position: absolute;
+            float: right;
+            left: 42%;
+            top: 10%;
+            padding: $padding_1;
+            p{
+                font-family: $font_2;
+                font-size: $fontsize_1 +1;
+            }
+        }
+
+        #picbox{
+            cursor: pointer;
+            text-align: center;
+            transition-duration: 0.5s;
+            z-index: 2;
+
+            img{
+                width: 74%;
+                filter: drop-shadow(11px 13px 4px rgba(17, 17, 17, 0.623));
+            }
+        }
+    }
+
+}

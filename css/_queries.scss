@@ -1,0 +1,64 @@
+$large: 992px;
+$medium: 768px;
+$small: 576px; 
+$ultrasmall: 280px;
+
+@media (min-width: $medium) and (max-width: $large){
+    .carouselSong{
+        width: 18% !important;
+    }
+    #profileCard{
+        #text{
+            p{
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+}
+
+@media (min-width: $small) and (max-width: $medium){
+    header{
+        a{
+            font-size: 1.3rem !important;
+            margin: 20px 0px !important;
+        }
+    }
+    .carouselSong{
+        width: 16% !important;
+        p{
+            font-size: 0.6rem !important;
+        }
+    }
+    #profileCard{
+        #text{
+            left: 32% !important;
+            p{
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+}
+
+@media (min-width: $ultrasmall) and (max-width: $small){
+    header{
+        a{
+            font-size: 0.8rem !important;
+            margin: 30px 0px !important;
+        }
+    }
+    .carouselSong{
+        p{
+            font-size: 0.5rem !important;
+        }
+        width: 18% !important;
+    }
+    #profileCard{
+        overflow-y: auto;
+        #text{
+            left: 32% !important;
+            p{
+                font-size: 1.1rem !important;
+            }
+        }
+    }
+}

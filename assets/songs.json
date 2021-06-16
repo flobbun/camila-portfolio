@@ -1,0 +1,68 @@
+{
+    "songs": [
+        {
+            "name": "Alone in the space",
+            "src": "aloneinthespace"
+        },
+        {
+            "name": "Ascension",
+            "src": "ascension"
+        },
+        {
+            "name": "Be a kid",
+            "src": "beakid"
+        },
+        {
+            "name": "Disgrace",
+            "src": "disgrace"
+        },
+        {
+            "name": "Endless Cycle",
+            "src": "endlesscycle"
+        },
+        {
+            "name": "Enjoy",
+            "src": "enjoy"
+        },
+        {
+            "name": "Freedom",
+            "src": "freedom"
+        },
+        {
+            "name": "Grateful",
+            "src": "grateful"
+        },
+        {
+            "name": "Hide",
+            "src": "hide"
+        },
+        {
+            "name": "Just try",
+            "src": "justtry"
+        },
+        {
+            "name": "Life",
+            "src": "life"
+        },
+        {
+            "name": "Piece of light",
+            "src": "pieceoflight"
+        },
+        {
+            "name": "Rainy day",
+            "src": "rainyday"
+        },
+        {
+            "name": "Run",
+            "src": "run"
+        },
+        {
+            "name": "Uncertainty",
+            "src": "uncertainty"
+        },
+        {
+            "name": "Yellowpride",
+            "src": "yellowpride"
+        }
+    ]
+}
