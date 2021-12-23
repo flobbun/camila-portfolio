@@ -7,100 +7,89 @@
     <title>Camila Portfolio</title>
 
     <!--CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/lib.css">
+    <link rel="stylesheet" href="./css/main2.css">
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></head>
 <body>
-    
-    <div id="superContainer" class="container-fluid col-md-12">
+    <div class="grid fadein" id="superContainer">
+        <video id="videobg" autoplay muted loop src="./assets/bg.mp4"></video>
 
         <!-- Header -->
+        <header class="grid grid-row-2 grid-column-1 rgap-4">
 
-        <div id="header" class="row justify-content-center col-md-12 col-sm-10 col-12 m-auto">
-            <header class="row justify-content-center col-md-12">
-
-                <a class="h1 container-fluid col-md-12 col-sm-12 col-12" href="#">
-                    <h1>Camila's Portfolio</h1>
+            <h1 class="h1 font-title txt-white">
+                <a class="h1 txt-bold font-title txt-white" href="https://camila-portfolio.netlify.app">
+                    Camila's Portfolio
                 </a>
+            </h1>
 
-                <nav class="row justify-content-center col-md-12">
-                    <ul class="row justify-content-center col-md-12 m-auto">
-                        <a class="balloon col-md-3 col-sm-8 col-8" id="songs" href="#songsSection">
-                            Songs 🎵
-                        </a>
+            <nav>
+                <ul class="grid grid-row-1 grid-column-3 p-2 jf-items-center cgap-4">
+                    <li class="floating glasscard-1 bradius-4 p-8 w80 txt-center btn heffect-1">
+                        <a class="font-normal txt-big txt-white" href="#songsSection">Songs 🎵</a>
+                    </li>
 
-                        <a onclick="aboutAnim()" class="balloon col-md-3 col-sm-8 col-8" id="about" href="#aboutSection">
-                            About 💁
-                        </a>
+                    <li class="floating glasscard-1 bradius-4 p-8 w80 txt-center btn heffect-1" onclick="aboutAnim()">
+                        <a class="font-normal txt-big txt-white" href="#aboutSection">About 💁</a>
+                    </li>
 
-                        <a class="balloon col-md-3 col-sm-8 col-8" id="contact" href="#contactSection">
-                            Contact 📞
-                        </a>
-                    </ul>
-                </nav>
-            </header>
+                    <li class="floating glasscard-1 bradius-4 p-8 w80 txt-center btn heffect-1">
+                        <a class="font-normal txt-big txt-white" href="#contactSection">Contact 📞</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
 
-            <!-- Songs -->
-
-            <div class="row justify-content-center col-md-12 col-sm-12 col-12 m-auto" id="songsSection">
-                <div class="row justify-content-center col-md-12 col-sm-12 col-12 m-auto carouselCover">
-                    <div id="carousel" class="row justify-content-center col-md-12 col-sm-12 col-12 m-auto"></div>
-                    <div class="row justify-content-center m-auto p-4">
-                        <button onclick="prevSong()" id="prev">
-                            <img src="assets/img/icons/prev.svg" alt="Previous songs">
-                        </button>
-                        <button onclick="nextSong()" id="next">
-                            <img src="assets/img/icons/next.svg" alt="Previous songs">
-                        </button>
-                    </div>
-                </div>
+        <!-- Songs -->
+        <section class="grid jf-content-center jf-items-center al-items-center grid-row-2 grid-column-1" id="songsSection">
+            <div class="floating grid grid-row-1 grid-column-4 cgap-4 jf-items-center" id="carousel"></div>
+            <div class="grid grid-row-1 grid-column-2 jf-items-center h20">
+                <button class="w10 btn glasscard-1 bradius-8 heffect-1" onclick="prevSong()" id="prev">
+                    <img class="w100 dropshadow" src="assets/img/icons/prev.svg" alt="Previous songs">
+                </button>
+                <button class="w10 btn glasscard-1 bradius-8 heffect-1" onclick="nextSong()" id="next">
+                    <img class="w100 dropshadow" src="assets/img/icons/next.svg" alt="Previous songs">
+                </button>
             </div>
+        </section>
 
-            <!-- About -->
-
-            <div class="row justify-content-center col-md-12 col-sm-12 col-12 m-auto" id="aboutSection">
-                <div class="container col-md-12 m-auto" id="profileCard">
-                    <div class="col-md-6 col-sm-8 col-8" id="text">
-                        <p>
-                            My name is Camila Macedo and I was born in Venezuela. I started playing instruments since I was seven years old, and since then I fell in love with music. Nowadays, I live in Portugal and I'm a music producer with orchestal, alternative, indie and pop styles.
-                        </p>
-                    </div>
-
-                    <div onmouseover="aboutAnim()" id="picbox" class="container col-md-12 m-auto">
-                        <img src="assets/img/pic.png" alt="Camila Rodrigues">
-                    </div>
-                </div>
+        <!-- About -->
+        <section class="grid jf-content-center jf-items-center al-items-center" id="aboutSection">
+            <div onmouseover="aboutAnim()" class="floating p-8 vw70 vh80 grid grid-column-2 glasscard-1 grid-row-1 bradius-4" id="profileCard">
+                <img class="grid m-auto" id="picbox"  src="assets/img/pic.png" alt="Camila Rodrigues">
+                <p id="text" class="grid invisible-2 txt-center txt-big txt-bold txt-black font-normal">
+                    My name is Camila Macedo and I was born in Venezuela. 
+                    I started playing instruments since I was seven years old, 
+                    and since then I fell in love with music. Nowadays, 
+                    I live in Portugal and I'm a music producer with orchestal, alternative, 
+                    indie and pop styles.
+                </p>
             </div>
+        </section>
 
-            <!-- Contact -->
+        <!-- Contact -->
+        <section class="grid grid-row-1 grid-column-4 al-items-center  jf-items-center cgap-4" id="contactSection">
+            <a class="floating-2 grid w64 h10 glasscard-1 p-4 heffect-1 bradius-4" target="a_blank" href="mailto:valeriamacedo99@gmail.com">
+                <img class="w33 m-auto" src="assets/img/icons/gmail.svg" title="Email" alt="Email">
+            </a>
+            <a class="floating grid w64 h10 glasscard-1 p-4 heffect-1 bradius-4" target="a_blank" href="https://open.spotify.com/artist/1D1ysKrf66vbk0sVjCdS9U?si=BzMnEKnpQDOH-katBw19fA&nd=1">
+                <img class="w33 m-auto" src="assets/img/icons/spotify.svg" title="Spotify" alt="Spotify">
+            </a>
+            <a class="floating grid w64 h10 glasscard-1 p-4 heffect-1 bradius-4" target="a_blank" href="https://www.instagram.com/camilamacedomusic/">
+                <img class="w33 m-auto" src="assets/img/icons/instagram.svg" title="Instagram" alt="Instagram">
+            </a>
+            <a class="floating-2 grid w64 h10 glasscard-1 p-4 heffect-1 bradius-4" target="a_blank" href="https://www.soundcloud.com/camilamacedomusic">
+                <img class="w33 m-auto" src="assets/img/icons/soundcloud.svg" title="SoundCloud" alt="SoundCloud">
+            </a>
+        </section>
 
-            <div class="row justify-content-center col-md-12 m-auto" id="contactSection">
-                <div class="row justify-content-center col-md-12 m-auto" id="contactCard">
-                    <a class="col-md-2 col-sm-5 col-3 text-center" target="a_blank" href="mailto:valeriamacedo99@gmail.com">
-                        <img class="col-md-6 col-sm-6 col-4" src="assets/img/icons/gmail.svg" title="Email" alt="Email">
-                    </a>
-                    <a class="col-md-2 col-sm-5 col-3 text-center" target="a_blank" href="https://open.spotify.com/artist/1D1ysKrf66vbk0sVjCdS9U?si=BzMnEKnpQDOH-katBw19fA&nd=1">
-                        <img class="col-md-6 col-sm-6 col-4" src="assets/img/icons/spotify.svg" title="Spotify" alt="Spotify">
-                    </a>
-                    <a class="col-md-2 col-sm-5 col-3 text-center" target="a_blank" href="https://www.instagram.com/camilamacedomusic/">
-                        <img class="col-md-6 col-sm-6 col-4" src="assets/img/icons/instagram.svg" title="Instagram" alt="Instagram">
-                    </a>
-                    <a class="col-md-2 col-sm-5 col-3 text-center" target="a_blank" href="https://www.soundcloud.com/camilamacedomusic">
-                        <img class="col-md-6 col-sm-6 col-4" src="assets/img/icons/soundcloud.svg" title="SoundCloud" alt="SoundCloud">
-                    </a>
-                </div>
-            </div>
-
-            <footer class="row justify-content-center col-md-12 col-sm-12 col-12">
-                <a class="col-md-3" href="https://jhonsportfolio.netlify.app/">WebDev: Jhon Aguiar</a>
-            </footer>
-
-        </div>
-
+        <footer class="grid w50 m-auto glasscard-1 bradius-4">
+            <a class="txt-normal txt-bold txt-center font-normal txt-black" href="https://jhonsportfolio.netlify.app/">WebDev: Jhon Aguiar</a>
+        </footer>
     </div>
 
     <script src="js/main.js"></script>

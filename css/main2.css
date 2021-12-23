@@ -1,0 +1,59 @@
+body{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+a, li, button{
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    background: none;
+    border: none;
+}
+
+header nav{margin-top: 6rem;}
+
+section{
+    height: 100vh;
+    margin-top: 52vh;
+}
+
+#picbox{
+    width: calc(35vw + 1.4rem);
+    position: relative;
+    left: 45%;
+    cursor: pointer;
+}
+
+#text{
+    font-size: calc(1.5vw + 0.8rem);
+    position: relative;
+    left: -25%;
+    top: 8%;
+}
+
+.dropshadow{filter: drop-shadow(2px 2px 1.4px var(--c2));}
+.dropshadow-2{filter: drop-shadow(11px 13px 4px rgba(17, 17, 17, 0.623));}
+
+#videobg{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.floating{animation: float 7s ease-in-out infinite;}
+.floating-2{animation: float 10s ease-in-out infinite;}
+
+.glasscard-1{
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2.5px );
+    -webkit-backdrop-filter: blur( 2.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

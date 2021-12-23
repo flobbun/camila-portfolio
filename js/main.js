@@ -1,8 +1,18 @@
 const carousel = document.querySelector('#carousel');
+const videobg = document.querySelector('#videobg');
 
 let nMaxSongs = 0;
 let carouselIndex = 0;
 let tempSongs = [];
+
+const uploadClasses = (el, classes) => classes.forEach(cl => el.classList.add(cl));
+const carouselSongCSS = [
+    'carouselSong', 'glasscard-1', 'p2', 'txt-center', 'glasscard-1',
+    'btn', 'floating', 'w80'
+];
+
+// Setting video background speed
+videobg.playbackRate = 1;
 
 const getSongsJson = function(){
     return new Promise((resolve, reject) => {
@@ -25,12 +35,12 @@ function fillCarousel(){
         const carouselSong = document.createElement('div');
         carouselSong.innerHTML = 
         `
-            <p>${tempSongs[i].name}</p>
-            <img class="col-md-12 col-sm-12 col-12" src="../assets/img/covers/${tempSongs[i].src}.jpeg"/>
+            <p class="txt-black txt-normal txt-shadow-1 font-normal">${tempSongs[i].name}</p>
+            <img class="w90" src="../assets/img/covers/${tempSongs[i].src}.jpeg"/>
             <audio src=../assets/songs/${tempSongs[i].src}.mp3></audio>
         `;
-        carouselSong.classList.add('carouselSong', 'col-md-4', 'col-sm-4', 'col-12');
-        carouselSong.style.animation = `fadeIn ${Math.random() * (1 - 0.5) + 0.5}s ease-in-out forwards`;
+        uploadClasses(carouselSong, carouselSongCSS);
+        carouselSong.style.animation = `fadein ${Math.random() * (1 - 0.5) + 0.5}s ease-in-out forwards`;
         carouselSong.addEventListener('mouseover', () => playSong(carouselSong));
         carouselSong.addEventListener('mouseout', () => playSong(carouselSong, true));
         carousel.appendChild(carouselSong);
@@ -66,10 +76,10 @@ function nextSong(){
     }
 }
 
-
 function aboutAnim(){
     const profileCard = document.querySelector('#profileCard');
-    profileCard.querySelector('#picbox').style.animation = "showinfo 1s forwards";
-    profileCard.querySelector('#picbox').style.setProperty("-webkit-filter", 'drop-shadow(6px 6px 12px rgba(17, 17, 17, 0.623))');
-    profileCard.querySelector('#text').style.animation = "fadeIn 1s forwards";
+    const picbox = profileCard.querySelector('#picbox');
+    picbox.style.animation = "showinfo 1s forwards";
+    picbox.classList.add('dropshadow-2');
+    profileCard.querySelector('#text').style.animation = "fadein 1s forwards";
 }
